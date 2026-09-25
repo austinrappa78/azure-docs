@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "repoId": "azure-docs",
+  "metadataSchema": [
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "string",
+      "required": true
+    },
+    {
+      "key": "owner",
+      "label": "Owner",
+      "type": "string",
+      "required": true
+    },
+    {
+      "key": "type",
+      "label": "Topic Type",
+      "type": "string",
+      "required": true,
+      "allowedValues": [
+        "concept",
+        "task",
+        "reference",
+        "troubleshooting"
+      ],
+      "description": "DITA topic type: concept (explanations/architecture), task (ordered procedures/how-tos), reference (APIs/schemas/tables), or troubleshooting (diagnosing and resolving a specific problem — condition, cause, and remedy)."
+    },
+    {
+      "key": "journeyStage",
+      "label": "Journey Stage",
+      "type": "string",
+      "required": true,
+      "description": "Where in the customer journey this topic sits (e.g. Evaluate, Plan, Build, Maintain). The organization's stage names are managed on the Content Gaps page, not here — this field just carries the value per topic."
+    },
+    {
+      "key": "useCases",
+      "label": "Use Cases",
+      "type": "string-list",
+      "required": true,
+      "description": "Which of the organization's defined use cases this topic covers (see the Content Gaps page). Drives the demand-side coverage matrix — a topic with no use case tag is invisible to it."
+    },
+    {
+      "key": "audience",
+      "label": "Audience",
+      "type": "string",
+      "required": true
+    },
+    {
+      "key": "platform",
+      "label": "Platform",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "includePaths": [],
+  "prePushValidation": true,
+  "sourceLinkBases": {
+    "ticket": "https://rappadev.atlassian.net",
+    "commit": "https://github.com/austinrappa78/azure-docs",
+    "pr": "https://github.com/austinrappa78/azure-docs"
+  },
+  "severities": {},
+  "journeyStages": [
+    {
+      "name": "Evaluate",
+      "description": ""
+    },
+    {
+      "name": "Plan",
+      "description": ""
+    },
+    {
+      "name": "Build",
+      "description": ""
+    },
+    {
+      "name": "Maintain",
+      "description": ""
+    }
+  ],
+  "useCases": [
+    {
+      "name": "Device Implantation",
+      "category": "Clinical Procedures",
+      "description": "The physical procedure of preparing, inserting, and fixing the lead."
+    },
+    {
+      "name": "Device Extraction",
+      "category": "Clinical Procedures",
+      "description": "End-of-life procedures or upgrades"
+    },
+    {
+      "name": "Initial Configuration",
+      "category": "Device Management",
+      "description": "Setting baseline parameters post-implant"
+    },
+    {
+      "name": "Routine Patient Monitoring",
+      "category": "Device Management",
+      "description": "Telemetry checks and periodic follow-ups"
+    },
+    {
+      "name": "Parameter Adjustments",
+      "category": "Device Management",
+      "description": "Tuning pacing/sensing parameters over time"
+    },
+    {
+      "name": "Resolving Error Codes",
+      "category": "Troubleshooting",
+      "description": ""
+    },
+    {
+      "name": "Investigating Alerts",
+      "category": "Troubleshooting",
+      "description": "Interpreting unexpected device behavior"
+    },
+    {
+      "name": "Procurement",
+      "category": "Compliance",
+      "description": ""
+    },
+    {
+      "name": "Compatibility",
+      "category": "Compliance",
+      "description": "Matching physical/electrical specs to pulse generators"
+    },
+    {
+      "name": "Safety Protocols",
+      "category": "Compliance",
+      "description": "Compatibility checks, sterilization, contraindications"
+    }
+  ],
+  "outputDirectory": "out",
+  "documentationFormat": "mdita",
+  "defaultTopicDirectory": "topics",
+  "defaultImageDirectory": "images"
+}
