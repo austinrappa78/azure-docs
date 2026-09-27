@@ -39,7 +39,7 @@
       "label": "Use Cases",
       "type": "string-list",
       "required": true,
-      "description": "Which of the organization's defined use cases this topic covers (see the Content Gaps page). Drives the demand-side coverage matrix — a topic with no use case tag is invisible to it."
+      "description": "Which of this project's defined use cases this topic covers (see the project's Content Gaps page). Drives the demand-side coverage matrix — a topic with no use case tag is invisible to it."
     },
     {
       "key": "audience",
@@ -80,58 +80,7 @@
       "description": ""
     }
   ],
-  "useCases": [
-    {
-      "name": "Device Implantation",
-      "category": "Clinical Procedures",
-      "description": "The physical procedure of preparing, inserting, and fixing the lead."
-    },
-    {
-      "name": "Device Extraction",
-      "category": "Clinical Procedures",
-      "description": "End-of-life procedures or upgrades"
-    },
-    {
-      "name": "Initial Configuration",
-      "category": "Device Management",
-      "description": "Setting baseline parameters post-implant"
-    },
-    {
-      "name": "Routine Patient Monitoring",
-      "category": "Device Management",
-      "description": "Telemetry checks and periodic follow-ups"
-    },
-    {
-      "name": "Parameter Adjustments",
-      "category": "Device Management",
-      "description": "Tuning pacing/sensing parameters over time"
-    },
-    {
-      "name": "Resolving Error Codes",
-      "category": "Troubleshooting",
-      "description": ""
-    },
-    {
-      "name": "Investigating Alerts",
-      "category": "Troubleshooting",
-      "description": "Interpreting unexpected device behavior"
-    },
-    {
-      "name": "Procurement",
-      "category": "Compliance",
-      "description": ""
-    },
-    {
-      "name": "Compatibility",
-      "category": "Compliance",
-      "description": "Matching physical/electrical specs to pulse generators"
-    },
-    {
-      "name": "Safety Protocols",
-      "category": "Compliance",
-      "description": "Compatibility checks, sterilization, contraindications"
-    }
-  ],
+  "useCases": [],
   "outputDirectory": "out",
   "documentationFormat": "mdita",
   "defaultTopicDirectory": "topics",
