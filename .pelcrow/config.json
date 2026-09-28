@@ -61,7 +61,24 @@
     "commit": "https://github.com/austinrappa78/azure-docs",
     "pr": "https://github.com/austinrappa78/azure-docs"
   },
-  "severities": {},
+  "severities": {
+    "unresolved-reference": "error",
+    "ambiguous-key-reference": "error",
+    "duplicate-key": "error",
+    "transclusion-cycle": "error",
+    "parse-error": "error",
+    "missing-metadata": "error",
+    "sentinel-metadata": "error",
+    "invalid-metadata-value": "error",
+    "stale-agents-rules": "warning",
+    "banned-term": "error",
+    "path-reference-used": "warning",
+    "dangling-image-reference": "error",
+    "dangling-xref-reference": "error",
+    "dangling-conref-reference": "error",
+    "incompatible-conref-target": "error",
+    "mdita-profile-violation": "error"
+  },
   "journeyStages": [
     {
       "name": "Evaluate",
