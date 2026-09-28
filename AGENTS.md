@@ -122,6 +122,14 @@ Use variables already defined for the publication. Do not define variables insid
 
 **Contiguous HTML constraint**: wrapping block tags (`data-props`, `data-conref`) and their contents must be authored as contiguous raw HTML with **no interior blank lines** after the opening tag or before the closing tag. Interior blank lines cause DITA-OT to split the element into un-paired siblings, letting conditional content silently escape filtering.
 
+## House Style (from markdownlint)
+
+The repository's own markdownlint configuration states these rules. Changed lines are checked against them before a commit is accepted.
+
+- **Proper names**: write exactly `.NET`, `ASP.NET`, `JavaScript`, `NuGet`, `PowerShell`, `macOS`, `C#`, `CLI`.
+- **Italic**: use the same delimiter the file already uses.
+- **Bold**: use the same delimiter the file already uses.
+
 ## Mandatory Metadata by Repository Format
 
 ### DITA (pelcrow-test-dita)
