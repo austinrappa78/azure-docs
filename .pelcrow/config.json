@@ -82,7 +82,7 @@
   ],
   "useCases": [],
   "outputDirectory": "out",
-  "documentationFormat": "mdita",
+  "documentationFormat": "microsoft-learn",
   "defaultTopicDirectory": "topics",
   "defaultImageDirectory": "images"
 }
