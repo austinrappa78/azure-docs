@@ -178,7 +178,7 @@ Formatting source: https://learn.microsoft.com/en-us/contribute/content/text-for
 
 The repository's own markdownlint configuration states these rules. Changed lines are checked against them before a commit is accepted.
 
-- **Proper names**: write exactly `JavaScript`, `PowerShell`, `ASP.NET`, `macOS`, `NuGet`, `.NET`, `CLI`, `C#`.
+- **Proper names**: write exactly `.NET`, `ASP.NET`, `JavaScript`, `NuGet`, `PowerShell`, `macOS`, `C#`, `CLI`.
 - **Italic**: use the same delimiter the file already uses.
 - **Bold**: use the same delimiter the file already uses.
 
