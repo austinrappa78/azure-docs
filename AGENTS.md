@@ -75,8 +75,8 @@ This repository is managed by **Pelcrow**, the reference desk and fact-checker f
 
 ## DITA XML Authoring Syntax
 
-- **Variable**: `<ph keyref="repo:key">fallback text</ph>`.
-- **Block transclusion**: `<p conkeyref="repo:target-key/element-id"/>` or `<step conkeyref="..."/>`.
+- **Variable**: `<ph keyref="product-name">fallback text</ph>`. Write the bare key for your own project's variables. Qualify it as `other-repo:key` only to deliberately use another project's key; a DITA-OT build can't resolve a qualified key.
+- **Block transclusion**: `<p conkeyref="target-key/element-id"/>` or `<step conkeyref="..."/>`.
 - **Conditional content**: use standard filtering attributes: `audience="admin"`, `platform="cloud"`, `product="..."`, or generic `props="..."`.
 - **Key definition**: define keys in the root publication map (`.ditamap`) using `<keydef keys="key-name" href="path/to/topic.dita"/>`.
 - **Valid XML Structure**: every topic file must have a single root element (`<concept>`, `<task>`, `<reference>`, or `<troubleshooting>`) adhering to DITA specifications. Call the `get_xml_schema` MCP tool to retrieve required child element hierarchies instead of guessing.
@@ -139,11 +139,11 @@ Example:
 Welcome to [product-name].
 ```
 
-Use variables already defined for the publication. Do not define variables inside an ordinary topic.
+Use variables already defined for the publication. Do not define variables inside an ordinary topic. Write the bare key for your own project's variables. Qualify it as `other-repo:key` only to deliberately use another project's key; a DITA-OT build can't resolve a qualified key.
 
 - **XML `.ditamap` key definitions are map-scoped, never in the topic or its frontmatter**: for an existing full-DITA `.ditamap`, declared via `<keydef keys="key-name" href="topics/target.dita"/>` (or any `keys`-bearing `<topicref>`). Frontmatter (`id:`, singular `key:`, etc.) is document metadata, never a key registry on its own; `data-key` (singular) is not the specification's `data-keys` and is not a recognized key-definition mechanism.
 - **Key value (generate this form)**: `<topicmeta><keywords><keyword>Effective Value</keyword></keywords></topicmeta>` inside the `<keydef>` — Pelcrow's current generated standard for a pure variable, matching what Pelcrow's own Map Editor "Add Variable" UI writes. `<topicmeta><linktext>Effective Value</linktext></topicmeta>` is also a valid DITA effective-key-content representation (permitted as general fallback effective content, not only a link's display label) and Pelcrow reads it as a fallback, but do not generate it for a new pure variable — a future organization-level policy may select it as the enforced form instead. Both forms normalize to the same internal key/value semantics.
-- **Block transclusion**: `<div data-conref="repo:key"></div>`; inline: `<span data-conref="repo:key"></span>`.
+- **Block transclusion**: `<div data-conref="key"></div>`; inline: `<span data-conref="key"></span>`.
 - **Conditional content**: use standard `data-props`. Generic values are whitespace-separated, e.g. `<p data-props="cloud internal">…</p>`. When the condition dimension matters, preserve it with parenthesized groups, e.g. `<p data-props="platform(cloud) audience(admin)">…</p>`. Both forms are valid; do not invent plain `platform=`, `audience=`, or `product=` HTML attributes.
 
 **Contiguous HTML constraint**: wrapping block tags (`data-props`, `data-conref`) and their contents must be authored as contiguous raw HTML with **no interior blank lines** after the opening tag or before the closing tag. Interior blank lines cause DITA-OT to split the element into un-paired siblings, letting conditional content silently escape filtering.
@@ -221,7 +221,7 @@ HTML elements inside fenced code blocks are treated as literal example code and 
 
 ## Pelcrow Repositories
 
-Valid repository IDs for Pelcrow tools and namespaced keys: `azure-docs`, `docs`, `lwdita-code-samples`, `pelcrow-test-dita`, `pelcrow-testcases`.
+Valid repository IDs for Pelcrow tools, and for qualifying another project's key: `azure-docs`, `docs`, `lwdita-code-samples`, `pelcrow-test-dita`, `pelcrow-testcases`.
 
 ## DITA-OT Operational Rules
 
