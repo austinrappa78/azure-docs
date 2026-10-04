@@ -101,6 +101,7 @@
   "useCases": [],
   "outputDirectory": "out",
   "documentationFormat": "microsoft-learn",
+  "publicationVariables": [],
   "defaultTopicDirectory": "topics",
   "defaultImageDirectory": "images"
 }
