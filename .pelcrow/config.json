@@ -102,6 +102,7 @@
   "outputDirectory": "out",
   "documentationFormat": "microsoft-learn",
   "publicationVariables": [],
+  "defaultPublicationDirectory": ".",
   "defaultTopicDirectory": "topics",
   "defaultImageDirectory": "images"
 }
