@@ -69,14 +69,6 @@ Formatting source: https://learn.microsoft.com/en-us/contribute/content/text-for
 - **No entity corruption**: do not serialize Markdown punctuation as HTML entities unless the source intentionally contains an entity.
 
 
-## House Style (from markdownlint)
-
-The repository's own markdownlint configuration states these rules. Changed lines are checked against them before a commit is accepted.
-
-- **Proper names**: write exactly `.NET`, `ASP.NET`, `JavaScript`, `NuGet`, `PowerShell`, `macOS`, `C#`, `CLI`.
-- **Italic**: use the same delimiter the file already uses.
-- **Bold**: use the same delimiter the file already uses.
-
 ## Mandatory Metadata
 
 
