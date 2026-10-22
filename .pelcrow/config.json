@@ -101,6 +101,156 @@
   "useCases": [],
   "outputDirectory": "out",
   "documentationFormat": "microsoft-learn",
+  "markdownProfile": {
+    "id": "microsoft-learn",
+    "version": "1",
+    "label": "Microsoft Learn Markdown",
+    "lineage": [
+      {
+        "id": "commonmark",
+        "version": "1"
+      },
+      {
+        "id": "gfm",
+        "version": "1"
+      },
+      {
+        "id": "microsoft-learn",
+        "version": "1"
+      }
+    ],
+    "syntax": [
+      "commonmark",
+      "gfm",
+      "frontmatter",
+      "alerts",
+      "ms-learn"
+    ],
+    "frontmatter": {
+      "accepted": [
+        "yaml"
+      ],
+      "defaultEncoding": "yaml"
+    },
+    "navigation": {
+      "type": "toc-yml",
+      "file": "TOC.yml"
+    },
+    "metadata": {
+      "owner": [
+        "ms.author",
+        "author"
+      ],
+      "productArea": [
+        "ms.service",
+        "ms.subservice"
+      ],
+      "topicType": [
+        "ms.topic"
+      ]
+    },
+    "mappings": [
+      {
+        "syntax": "ms-learn.include",
+        "means": "reuse",
+        "certainty": "stated"
+      },
+      {
+        "syntax": "ms-learn.code",
+        "means": "code-sample",
+        "certainty": "stated"
+      },
+      {
+        "syntax": "ms-learn.xref",
+        "means": "cross-reference",
+        "certainty": "stated"
+      },
+      {
+        "syntax": "ms-learn.moniker",
+        "means": "condition.version",
+        "certainty": "stated"
+      },
+      {
+        "syntax": "ms-learn.zone",
+        "means": "condition.choice",
+        "certainty": "stated"
+      },
+      {
+        "syntax": "alert",
+        "means": "alert",
+        "certainty": "stated"
+      },
+      {
+        "syntax": "html.kbd",
+        "means": "user-input.key",
+        "certainty": "stated"
+      },
+      {
+        "syntax": "strong",
+        "when": [
+          "in-chain"
+        ],
+        "means": "menu-cascade",
+        "certainty": "convention",
+        "confidence": 0.9
+      },
+      {
+        "syntax": "strong",
+        "when": [
+          "surface-phrase"
+        ],
+        "means": "ui-surface",
+        "certainty": "convention",
+        "confidence": 0.8
+      },
+      {
+        "syntax": "strong",
+        "when": [
+          "after-ui-verb",
+          "not-in-table-cell",
+          "not-list-lead-in"
+        ],
+        "means": "ui-control",
+        "certainty": "convention",
+        "confidence": 0.8
+      },
+      {
+        "syntax": "emphasis",
+        "when": [
+          "definition-nearby",
+          "not-placeholder"
+        ],
+        "means": "term",
+        "certainty": "convention",
+        "confidence": 0.5
+      },
+      {
+        "syntax": "inlineCode",
+        "means": "code-element",
+        "certainty": "convention",
+        "confidence": 0.6
+      }
+    ],
+    "components": {},
+    "rules": {
+      "markdownlint": "honor-repo-config",
+      "pelcrow": [
+        "heading-no-inline-style",
+        "link-text-no-style",
+        "placeholder-escaped",
+        "code-fence-language",
+        "bold-looks-like-code"
+      ],
+      "gate": [
+        "heading-no-inline-style",
+        "link-text-no-style",
+        "placeholder-escaped",
+        "code-fence-language"
+      ]
+    },
+    "writingRules": "microsoft-learn",
+    "identity": "72426000b3df19781eea10754f716b61c89c6063f831056ebf15261ecc952d79"
+  },
   "publicationVariables": [],
   "defaultPublicationDirectory": ".",
   "defaultTopicDirectory": "topics",
