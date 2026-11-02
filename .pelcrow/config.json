@@ -249,7 +249,25 @@
       ]
     },
     "writingRules": "microsoft-learn",
-    "identity": "72426000b3df19781eea10754f716b61c89c6063f831056ebf15261ecc952d79"
+    "interfaceConventions": {
+      "tabs": {
+        "portal": "Azure portal",
+        "azure-portal": "Azure portal",
+        "cli": "Azure CLI",
+        "azure-cli": "Azure CLI",
+        "powershell": "Azure PowerShell",
+        "azure-powershell": "Azure PowerShell",
+        "rest": "REST API",
+        "rest-api": "REST API"
+      },
+      "names": [
+        "Azure portal"
+      ],
+      "aliases": {
+        "portal": "Azure portal"
+      }
+    },
+    "identity": "13b562d9454e74a1ca0f99bc0a66c5f1d29c6fa65d2b42c8097df2db1961bd4d"
   },
   "publicationVariables": [],
   "defaultPublicationDirectory": ".",
