@@ -54,6 +54,85 @@
       "required": true
     }
   ],
+  "factTaxonomy": {
+    "schemaVersion": 1,
+    "id": "org:product-scope",
+    "revision": 1,
+    "dimensions": [
+      {
+        "id": "product",
+        "label": "Product",
+        "cardinality": "one"
+      },
+      {
+        "id": "component",
+        "label": "Component",
+        "cardinality": "one",
+        "parentDimensionId": "product"
+      },
+      {
+        "id": "feature",
+        "label": "Feature",
+        "cardinality": "one",
+        "parentDimensionId": "product"
+      },
+      {
+        "id": "version",
+        "label": "Version",
+        "cardinality": "one",
+        "parentDimensionId": "product",
+        "comparison": "version-lineage"
+      },
+      {
+        "id": "platform",
+        "label": "Platform",
+        "cardinality": "many"
+      },
+      {
+        "id": "audience",
+        "label": "Audience",
+        "cardinality": "many"
+      }
+    ],
+    "enabledDimensions": [
+      "product",
+      "version",
+      "platform",
+      "audience"
+    ],
+    "hierarchies": [
+      {
+        "id": "product-version",
+        "dimensions": [
+          "product",
+          "version"
+        ],
+        "relationship": "PART_OF"
+      }
+    ],
+    "display": {
+      "path": [
+        "product"
+      ],
+      "qualifiers": [
+        "version",
+        "platform",
+        "audience"
+      ]
+    },
+    "bindings": {
+      "fields": {
+        "product": "product",
+        "version": "version",
+        "platform": "platform",
+        "audience": "audience"
+      },
+      "keyMetadataField": "fact-metadata",
+      "attributeField": "attribute",
+      "attributeLabelField": "attribute-label"
+    },
+    "repositoryOverrides": {}
+  },
   "includePaths": [],
   "prePushValidation": true,
   "provenancePolicy": "disabled",
